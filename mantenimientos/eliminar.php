@@ -1,5 +1,5 @@
 <?php 
-include '../../config/conexion.php';
+include '../config/conexion.php';
 $id=$_GET['id'];
 mysqli_query($conn, "DELETE FROM usuarios WHERE id='$id'");
 header("Location:index.php");

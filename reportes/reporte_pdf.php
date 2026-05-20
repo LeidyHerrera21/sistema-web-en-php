@@ -1,7 +1,7 @@
 <?php
 ob_start();
 include '../config/conexion.php';
-require('../libreria/fpdf/fpdf.php');
+require('../libreria/fpdf.php');
 $pdf = new FPDF();
 $pdf->AddPage();
 $pdf->SetFont('Arial','B',16);

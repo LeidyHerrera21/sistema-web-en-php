@@ -5,7 +5,7 @@ include '../config/conexion.php';
 $user=$_POST ['usuario'];
 $pass=md5($_POST["password"]);
 
-$sql=mysqli_query($conn,"SELECT * FROM usuario WHERE usuario='$user' AND password='$pass'");
+$sql=mysqli_query($conn,"SELECT * FROM usuarios WHERE usuario='$user' AND password='$pass'");
 
 if (mysqli_num_rows($sql)>0) {
     $_SESSION['usuario']=$user;

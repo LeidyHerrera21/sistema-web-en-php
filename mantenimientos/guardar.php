@@ -1,5 +1,5 @@
 <?php
-include '../../config/conexion.php';
+include '../config/conexion.php';
 
 $n=$_POST['nombres'];
 $u=$_POST['usuario'];

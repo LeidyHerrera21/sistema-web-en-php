@@ -1,0 +1,167 @@
+    /* Estilos Generales con Tipografía Moderna y Fondo Limpio */
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f7f9fc;
+        color: #212529;
+    }
+
+    /* Animación de entrada para todo el contenedor */
+    .main-container {
+        animation: slideUpFade 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    @keyframes slideUpFade {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Tarjeta del Formulario */
+    .form-card {
+        background: #ffffff;
+        border: none;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(102, 16, 242, 0.04);
+        transition: all 0.4s ease;
+    }
+
+    .form-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 15px 35px rgba(13, 110, 253, 0.1);
+    }
+
+    /* Inputs Estilizados con Enfoque de Brillo Eléctrico */
+    .form-control {
+        border-radius: 10px;
+        border: 2px solid #e2e8f0;
+        padding: 12px 18px;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+        border-color: #6610f2; /* Morado base */
+        box-shadow: 0 0 0 0.25rem rgba(102, 16, 242, 0.15), 
+                    0 4px 12px rgba(102, 16, 242, 0.1); /* Efecto de brillo sutil */
+        background-color: #fff;
+    }
+
+    /* Botón "Grabar" Estilizado con Degradado Dinámico */
+    .btn-success {
+        background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+        border: none;
+        border-radius: 10px;
+        padding: 12px 24px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 15px rgba(102, 16, 242, 0.3);
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+        overflow: hidden;
+        color: #fff;
+    }
+
+    .btn-success:hover {
+        background: linear-gradient(135deg, #0d6efd 30%, #520dc2 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(102, 16, 242, 0.45), 
+                    0 0 15px rgba(0, 198, 255, 0.3); /* Brillo cian extra */
+    }
+
+    .btn-success:active {
+        transform: translateY(1px);
+    }
+
+    /* Botones de Acción de la Tabla (Editar y Eliminar) */
+    .btn-sm {
+        border-radius: 8px;
+        padding: 6px 16px;
+        font-weight: 500;
+        border: none;
+        transition: all 0.3s ease;
+    }
+
+    /* Editar - Azul Eléctrico */
+    .btn-warning {
+        background-color: #0d6efd;
+        color: white !important;
+        box-shadow: 0 3px 10px rgba(13, 110, 253, 0.2);
+    }
+    .btn-warning:hover {
+        background-color: #00c6ff;
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 198, 255, 0.4);
+    }
+
+    /* Eliminar - Morado Oscuro Intenso */
+    .btn-danger {
+        background-color: #520dc2;
+        color: white;
+        box-shadow: 0 3px 10px rgba(82, 13, 194, 0.2);
+    }
+    .btn-danger:hover {
+        background-color: #6610f2;
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(102, 16, 242, 0.4);
+    }
+
+    /* Tabla de Datos Premium */
+    .table-container {
+        background: #ffffff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    }
+
+    .table {
+        margin-bottom: 0;
+    }
+
+    /* Encabezado con degradado fluido animado */
+    .table-primary {
+        background: linear-gradient(90deg, #520dc2, #6610f2, #0d6efd, #00c6ff);
+        background-size: 300% 300%;
+        animation: gradientMove 8s ease infinite;
+        color: #fff;
+        border: none;
+    }
+
+    .table-primary th {
+        background: transparent !important;
+        color: #fff !important;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        padding: 16px;
+        border: none;
+    }
+
+    @keyframes gradientMove {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* Filas de la Tabla con Desplazamiento e Iluminación */
+    .table tbody tr {
+        transition: all 0.3s ease;
+    }
+
+    .table tbody tr:hover {
+        background-color: rgba(0, 198, 255, 0.04) !important; /* Capa ultra suave de cian */
+        transform: scale(1.006) translateX(4px); /* Se mueve ligeramente hacia la derecha */
+        box-shadow: inset 5px 0 0 #00c6ff, 0 4px 15px rgba(0,0,0,0.03); /* Línea de enfoque cian */
+    }
+
+    .table tbody td {
+        padding: 16px 12px;
+        border-bottom: 1px solid #edf2f7;
+    }
+
+    /* Ajuste de badges o textos decorativos */
+    .badge.bg-light {
+        background-color: #f1f5f9 !important;
+        color: #6610f2 !important;
+        font-weight: 500;
+        border: 1px solid #e2e8f0 !important;
+    }

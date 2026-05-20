@@ -1,0 +1,165 @@
+/* Importar tipografía moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Estilos Generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f9fc;
+    color: #212529;
+    animation: fadeInPage 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes fadeInPage {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Encabezado del Reporte */
+h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: #6c757d;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(90deg, #0d6efd, #00c6ff);
+    border-radius: 2px;
+}
+
+/* Estructura y Contenedor de la Tabla */
+.table {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(102, 16, 242, 0.03);
+    border: none !important;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-middle: middle;
+}
+
+/* Encabezado Dinámico de la Tabla (Reemplaza el table-dark clásico) */
+.table-dark {
+    background: linear-gradient(90deg, #520dc2, #6610f2, #0d6efd, #00c6ff) !important;
+    background-size: 300% 300% !important;
+    animation: gradientMove 8s ease infinite;
+    border: none;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.table-dark th {
+    background: transparent !important;
+    color: #ffffff !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 18px 12px;
+    text-align: center;
+    border: none !important;
+}
+
+/* Filas de Datos con Efecto de Enfoque */
+.table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(0, 198, 255, 0.04) !important;
+    transform: scale(1.006) translateX(4px);
+    box-shadow: inset 5px 0 0 #00c6ff, 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.table tbody td {
+    padding: 16px 12px;
+    vertical-align: middle;
+    text-align: center;
+    border-bottom: 1px solid #edf2f7;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+/* Badge personalizado para la columna Estado */
+.table tbody td:last-child {
+    font-weight: 600;
+}
+.table tbody tr td:contains('ACTIVO'), 
+.table tbody td {
+    color: #495057;
+}
+
+/* Zona de Botones de Exportación */
+.btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 12px 25px;
+    border-radius: 10px;
+    border: none;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Botón PDF (Rojo/Infrarrojo) */
+.btn-danger {
+    background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+    color: #fff;
+}
+.btn-danger:hover {
+    background: linear-gradient(135deg, #ff4b2b 0%, #e63946 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 75, 43, 0.35);
+}
+
+/* Botón WORD (Azul Corporativo) */
+.btn-primary {
+    background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+    color: #fff;
+}
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0072ff 0%, #0d6efd 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 114, 255, 0.35);
+}
+
+/* Botón EXCEL (Verde Esmeralda) */
+.btn-success {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    color: #fff;
+}
+.btn-success:hover {
+    background: linear-gradient(135deg, #38ef7d 0%, #10b981 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(56, 239, 125, 0.35);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
